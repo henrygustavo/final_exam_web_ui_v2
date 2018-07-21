@@ -1,0 +1,15 @@
+<h2>Select degree type</h2>
+<div>
+    <select [(ngModel)]="degreeTypeSelected">
+        <option *ngFor="let type of degreeTypeOptions" [ngValue]="type.id">{{type.name}}</option>
+      </select>
+      <button type="button" (click)="onSearch()">Search</button>
+</div>
+
+<hr>
+
+<div *ngFor="let student of students">
+ <b>Id:</b> {{student.id}}, <b>Name:</b> {{student.name}},
+ <b>DegreeType:</b> {{student.degreeType}},  <b>ScholarShip:</b>{{student.scholarShip}} 
+      
+</div>
